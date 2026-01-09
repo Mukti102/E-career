@@ -227,6 +227,60 @@ const HomePage = ({ onStart }) => {
                 menemukan karier yang selaras dengan jati diri Anda.
               </p>
 
+              <div className="relative md:hidden bg-white rounded-[2.5rem] mb-20 ">
+                <h3 className="text-slate-900 font-bold mb-8 flex items-center">
+                  <span className="w-8 h-1 bg-indigo-600 mr-3 rounded-full"></span>
+                  Langkah Persiapan
+                </h3>
+
+                <div className="space-y-8">
+                  {[
+                    {
+                      title: "Tes Psikologi",
+                      desc: "Ikuti tes Big Five Personality di",
+                      link: "ibunda.id",
+                      url: "https://www.ibunda.id/tespsikologi/tes-kepribadian",
+                    },
+                    {
+                      title: "Input Skor",
+                      desc: "Masukkan hasil skor Anda ke sistem kami.",
+                      link: null,
+                    },
+                    {
+                      title: "Hasil RIASEC",
+                      desc: "Dapatkan profil Holland Code secara instan.",
+                      link: null,
+                    },
+                  ].map((item, idx) => (
+                    <div key={idx} className="flex group">
+                      <div className="mr-4">
+                        <div className="w-8 h-8 rounded-xl bg-slate-50 flex items-center justify-center text-slate-400 group-hover:bg-indigo-600 group-hover:text-white transition-all font-bold text-xs border border-slate-100">
+                          {idx + 1}
+                        </div>
+                      </div>
+                      <div>
+                        <h4 className="text-sm font-bold text-slate-800">
+                          {item.title}
+                        </h4>
+                        <p className="text-xs text-slate-500 mt-1 leading-relaxed">
+                          {item.desc}
+                          {item.link && (
+                            <a
+                              href={item.url}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="text-indigo-600 font-semibold underline ml-1 hover:text-indigo-800"
+                            >
+                              {item.link}
+                            </a>
+                          )}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
               <button
                 onClick={onStart}
                 className="group relative inline-flex items-center justify-center px-10 py-4 font-bold text-white bg-indigo-600 rounded-2xl transition-all duration-300 hover:bg-indigo-700 hover:shadow-[0_10px_25px_rgba(79,70,229,0.3)] active:scale-95"
@@ -249,7 +303,7 @@ const HomePage = ({ onStart }) => {
             </div>
 
             {/* Sisi Kanan: Panduan Alur */}
-            <div className="relative">
+            <div className="relative md:block hidden ">
               <div className="absolute inset-0 bg-gradient-to-tr from-indigo-50 to-purple-50 rounded-[2.5rem] -rotate-2"></div>
               <div className="relative bg-white border border-slate-100 rounded-[2.5rem] p-10 shadow-sm">
                 <h3 className="text-slate-900 font-bold mb-8 flex items-center">
