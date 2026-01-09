@@ -194,7 +194,6 @@ const StepIndicator = ({ currentStep }) => {
 const HomePage = ({ onStart }) => {
   return (
     <div className="min-h-screen bg-[#f8fafc] relative overflow-hidden flex items-center justify-center p-6">
-      {/* Dekorasi Background - Soft & Professional */}
       <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-indigo-100/50 rounded-full blur-[120px]"></div>
       <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-purple-100/50 rounded-full blur-[120px]"></div>
 
@@ -205,7 +204,7 @@ const HomePage = ({ onStart }) => {
           </div>
           <div className="grid md:grid-cols-2 gap-16 items-center">
             {/* Sisi Kiri: Konten Utama */}
-            <div className="text-left">
+            <div className="text-left md:order-0 order-2">
               <div className="inline-flex items-center space-x-2 bg-indigo-50 border border-indigo-100 px-4 py-1.5 rounded-full mb-8">
                 <span className="flex h-2 w-2 rounded-full bg-indigo-600 animate-pulse"></span>
                 <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-indigo-600">
@@ -345,7 +344,10 @@ const HomePage = ({ onStart }) => {
               </a>
               <div className="h-4 w-[1px] bg-slate-200 hidden md:block"></div>
               <p className="text-[10px] font-medium text-slate-400 italic">
-                Bimbingan dan Konseling Universitas Teknologi Yogyakarta
+                Bimbingan dan Konseling
+              </p>
+              <p className="text-[10px] font-medium text-slate-400 italic">
+                Universitas Teknologi Yogyakarta
               </p>
             </div>
           </div>
