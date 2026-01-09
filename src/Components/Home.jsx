@@ -200,7 +200,7 @@ const HomePage = ({ onStart }) => {
 
       <div className="max-w-5xl w-full z-10">
         <div className="bg-white/80 backdrop-blur-2xl border border-white rounded-[3rem] shadow-[0_20px_50px_rgba(0,0,0,0.05)] p-8 md:p-16">
-          <div className=" flex justify-center  items-center">
+          <div className=" flex justify-center md:mb-0 mb-10  items-center">
             <img src={logo} className="w-20 rounded-full shadow-" />
           </div>
           <div className="grid md:grid-cols-2 gap-16 items-center">
@@ -324,7 +324,7 @@ const HomePage = ({ onStart }) => {
               </div>
             </div>
 
-            <div className="flex items-center space-x-6">
+            <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6">
               <a
                 href="mailto:emailkamu@gmail.com"
                 className="flex items-center text-slate-400 hover:text-indigo-600 transition-colors"
